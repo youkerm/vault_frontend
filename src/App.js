@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
 
 import {
@@ -11,6 +10,7 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 
 import HomePage from './pages/HomePage';
 import PlatformPage from './platform/PlatformPage';
+import AirdropRegisterPage from './pages/AirdropRegisterPage';
 import Navigation from "./Navigation";
 
 class App extends Component {
@@ -18,17 +18,13 @@ class App extends Component {
     return (
         <MuiThemeProvider>
             <div className="App">
-                <header className="App-header">
-                  <img src={logo} className="App-logo" alt="logo" />
-                  <h1 className="App-title">Welcome to React</h1>
-                </header>
-
                 <Navigation/>
 
                 <div style={{padding: "10px", maxWidth:"1200px", margin:"auto"}}>
                     <Switch>
                         <Route exact path="/" component={HomePage} />
                         <Route path="/platform" component={PlatformPage} />
+                        <Route path="/airdrop-registration" component={AirdropRegisterPage} />
                     </Switch>
                 </div>
             </div>

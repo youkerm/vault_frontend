@@ -2,23 +2,30 @@ import React from 'react';
 
 import Grid from 'material-ui/Grid';
 import Button from 'material-ui/Button';
+import Typography from 'material-ui/Typography';
+
+import { Link } from 'react-router-dom';
 
 const HomePage = () => {
     return (
         <div>
             <Grid container
                   justify="center"
-                  spacing={24}>
+                  spacing={70}>
 
                 <Grid item xs={12} sm={12} md={6}>
                     <div style={{ textAlign: "center", height: "300px", position: "relative", top: "50%",
                         transform: "translateY(-50%)"  }}>
-                        <h1>The fountier of cryptocurrency funding</h1>
-                        <p>This is just a test!</p>
+                        <Typography variant="display3" gutterBottom>
+                            The frontier of how start-ups receive funding
+                        </Typography>
+                        <p>Click the button below to register for Vault's first airdrop!</p>
 
-                        <Button variant="raised" size="large" color="primary">
-                            Register for Airdrop
-                        </Button>
+                        <Link to="/airdrop-registration">
+                            <Button variant="raised" size="large" color="primary">
+                                Register for Airdrop
+                            </Button>
+                        </Link>
                     </div>
                 </Grid>
                 <Grid item xs={12} sm={12} md={6}>
