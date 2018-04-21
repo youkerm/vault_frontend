@@ -15,7 +15,7 @@
     "typeface-roboto": "0.0.54"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "export PORT=8080 react-scripts start",
     "stop": "pkill --signal SIGINT vault_prototype",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
